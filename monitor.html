@@ -29,10 +29,27 @@
 <body>
     <div id="container"></div>
     <div class="input-card">
-        <h4>轨迹显示(2.5倍速)</h4>
+        <h4>实时定位显示</h4>
+        <div>
+            <label>频率</label><span id="opa-val">-</span><label>MHz</label>
+            <br>
+            <input id="opacity" type="range" value="924" min="924" max="925" step="0.05" oninput="updateFreq(this.value)"
+                onchange="setFreq(this.value)">
+        </div>
+        <h4>选择队伍</h4>
+        <select name="country-list" style="height: 28px;margin-right: 10px;" onchange="changeTeam(this.value)">
+            <option value="0" selected>全部队伍</option>
+            <option value="1">队伍1</option>
+            <option value="2">队伍2</option>
+            <option value="3">队伍3</option>
+            <option value="4">队伍4</option>
+            <option value="5">队伍5</option>
+            <option value="6">队伍6</option>
+        </select>
     </div>
-    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=e59aa6db226fcbb56af6d59203ddae68"></script>
-    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=e59aa6db226fcbb56af6d59203ddae68">
+    </script>
+    <script type="text/javascript" src="live.js"></script>
 </body>
 
 </html>

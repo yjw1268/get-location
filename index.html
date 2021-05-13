@@ -32,7 +32,7 @@
         <hr>
         <p id='result'></p>
         <hr>
-        <p>目前每隔 5 秒重定位一次上传至数据库以检测轨迹。</p>
+        <p>每隔 3 秒重定位一次上传至数据库以检测轨迹。</p>
     </div>
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=e59aa6db226fcbb56af6d59203ddae68">
     </script>
@@ -44,7 +44,7 @@
         AMap.plugin('AMap.Geolocation', function () {
             var geolocation = new AMap.Geolocation({
                 enableHighAccuracy: true, //是否使用高精度定位，默认:true
-                timeout: 10000, //超过10秒后停止定位，默认：5s
+                timeout: 3000, //超过10秒后停止定位，默认：5s
                 buttonPosition: 'RB', //定位按钮的停靠位置
                 buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
                 zoomToAccuracy: true, //定位成功后是否自动调整地图视野到定位点
@@ -61,7 +61,7 @@
                     }
                     console.log(i);
                 });
-            }, 5000);
+            }, 3000);
         });
         var url = 'upload_data.php';
 
