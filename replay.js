@@ -117,3 +117,15 @@ function resumeAnimation() {
 function stopAnimation() {
     marker.stopMove();
 }
+
+var freq = 924;
+updateFreq(freq);
+function updateFreq(v) {
+    document.getElementById('opa-val').innerText = v;
+}
+
+function setFreq(val) {
+    updateFreq(val);
+    frequrl = "https://www.bupt404.cn/location/pic/" + val + ".png";
+    imageLayer.setImageUrl(frequrl);
+}

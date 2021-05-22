@@ -30,6 +30,12 @@
     <div id="container"></div>
     <div class="input-card">
         <h4>轨迹回放控制</h4>
+        <div>
+            <label>频率</label><span id="opa-val">-</span><label>MHz</label>
+            <br>
+            <input id="opacity" type="range" value="924" min="924" max="925" step="0.05"
+                oninput="updateFreq(this.value)" onchange="setFreq(this.value)">
+        </div>
         <div class="input-item">
             小组ID: <input type="text" id="gid" name="groupid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="button" class="btn" value="确定" id="get"
